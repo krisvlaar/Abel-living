@@ -127,4 +127,82 @@ background-color: var(--primary);
 color: var(--text-light);
 text-decoration: none;
 border-radius: 8px;
+transition: background 0.3s;
+}
+
+
+.contact a:hover {
+background-color: #388e3c;
+}
+
+
+footer {
+background: var(--primary);
+color: var(--text-light);
+text-align: center;
+padding: 1rem;
+margin-top: 2rem;
+}
+
+
+@media (max-width: 768px) {
+header {
+flex-direction: column;
+align-items: flex-start;
+}
+nav {
+margin-top: 0.5rem;
+}
+}
+</style>
+</head>
+<body>
+<header>
+<h1>Abel Living</h1>
+<nav>
+<a href="#over">Over ons</a>
+<a href="#diensten">Diensten</a>
+<a href="#contact">Contact</a>
+</nav>
+</header>
+
+
+<section class="hero">
+<h2>Welkom bij Abel Living</h2>
+<p>Wij brengen rust, stijl en duurzaamheid in jouw leefomgeving.</p>
+</section>
+
+
+<main>
+<section id="over">
+<h2>Over ons</h2>
+<p>
+Bij <strong>Abel Living</strong> geloven we in wonen met aandacht. Wij combineren vakmanschap met oog voor detail en een duurzame aanpak. Ons doel is om ruimtes te creëren die zowel comfortabel als tijdloos zijn.
+</p>
+</section>
+
+
+<section id="diensten" class="diensten">
+<h2>Diensten</h2>
+<ul>
+<li><strong>Interieuradvies</strong><br> Persoonlijke begeleiding bij het inrichten van je woning.</li>
+<li><strong>Projectinrichting</strong><br> Complete oplossingen voor bedrijven en kantoren.</li>
+<li><strong>Duurzaam wonen</strong><br> Advies en uitvoering met milieuvriendelijke materialen.</li>
+</ul>
+</section>
+
+
+<section id="contact" class="contact">
+<h2>Contact</h2>
+<p>Neem gerust contact met ons op voor meer informatie.</p>
+<a href="mailto:info@abel-living.nl">E-mail ons</a>
+<a href="tel:+310612345678">Bel ons</a>
+</section>
+</main>
+
+
+<footer>
+<p>&copy; 2025 Abel Living – Alle rechten voorbehouden</p>
+</footer>
+</body>
 </html>

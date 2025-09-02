@@ -60,23 +60,26 @@ opacity: 0.7;
 
 
 .hero {
-text-align: center;
-padding: 4rem 2rem;
-background: url('huis5.png') center/cover no-repeat;
-color: var(--text-light);
+  position: relative;
+  text-align: center;
+  color: var(--text-light);
 }
 
-
-.hero h2 {
-font-size: 2.5rem;
-margin-bottom: 1rem;
+.hero-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover; /* zorgt dat de foto mooi schaalt */
 }
 
-
-.hero p {
-font-size: 1.2rem;
-max-width: 600px;
-margin: 0 auto;
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0,0,0,0.4); /* donkere overlay voor leesbaarheid */
+  padding: 2rem;
+  border-radius: 12px;
 }
 
 
@@ -168,8 +171,11 @@ margin-top: 0.5rem;
 
 
 <section class="hero">
-<h2>Welkom bij Abel Living</h2>
-<p>Wij brengen rust, stijl en duurzaamheid in jouw leefomgeving.</p>
+  <img src="images/huis5.png" alt="Jaren 30 woning" class="hero-img">
+  <div class="hero-text">
+    <h2>Welkom bij Abel Living</h2>
+    <p>Wij brengen rust, stijl en duurzaamheid in jouw leefomgeving.</p>
+  </div>
 </section>
 
 

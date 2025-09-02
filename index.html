@@ -1,104 +1,184 @@
-index.html
 <!DOCTYPE html>
 <html lang="nl">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mijn Bedrijf</title>
+  <title>Abel Living</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
   <style>
-    body {
-      font-family: Arial, sans-serif;
+    :root {
+      --primary: #2e7d32; /* donkergroen */
+      --secondary: #f5f0e8; /* zacht beige */
+      --text-dark: #333;
+      --text-light: #fff;
+    }
+
+    * {
       margin: 0;
       padding: 0;
-      background-color: #f5f5f5;
-      color: #333;
+      box-sizing: border-box;
     }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--secondary);
+      color: var(--text-dark);
+      line-height: 1.6;
+    }
+
     header {
-      background-color: #004080;
-      color: white;
-      text-align: center;
-      padding: 2rem 1rem;
+      background: var(--primary);
+      color: var(--text-light);
+      padding: 1.5rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
+
     header h1 {
-      margin: 0;
+      font-size: 1.8rem;
+      font-weight: 700;
+    }
+
+    nav a {
+      color: var(--text-light);
+      text-decoration: none;
+      margin-left: 1.5rem;
+      font-weight: 500;
+      transition: opacity 0.3s;
+    }
+
+    nav a:hover {
+      opacity: 0.7;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 4rem 2rem;
+      background: url('https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+      color: var(--text-light);
+    }
+
+    .hero h2 {
       font-size: 2.5rem;
+      margin-bottom: 1rem;
     }
-    header p {
+
+    .hero p {
       font-size: 1.2rem;
+      max-width: 600px;
+      margin: 0 auto;
     }
+
     main {
-      max-width: 900px;
+      max-width: 1000px;
       margin: 2rem auto;
-      padding: 1rem;
-      background: white;
-      border-radius: 12px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      padding: 0 1rem;
     }
+
     section {
-      margin-bottom: 2rem;
+      margin-bottom: 3rem;
     }
+
     h2 {
-      color: #004080;
+      color: var(--primary);
+      margin-bottom: 1rem;
     }
+
+    .diensten ul {
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+    }
+
+    .diensten li {
+      background: #fff;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
     .contact {
       text-align: center;
     }
+
     .contact a {
       display: inline-block;
       margin: 0.5rem;
-      padding: 0.7rem 1.5rem;
-      background-color: #004080;
-      color: white;
+      padding: 0.8rem 1.5rem;
+      background-color: var(--primary);
+      color: var(--text-light);
       text-decoration: none;
       border-radius: 8px;
       transition: background 0.3s;
     }
+
     .contact a:hover {
-      background-color: #0066cc;
+      background-color: #388e3c;
     }
+
     footer {
-      background-color: #004080;
-      color: white;
+      background: var(--primary);
+      color: var(--text-light);
       text-align: center;
       padding: 1rem;
       margin-top: 2rem;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      nav {
+        margin-top: 0.5rem;
+      }
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Mijn Bedrijf</h1>
-    <p>Uw partner in [dienst/product]</p>
+    <h1>Abel Living</h1>
+    <nav>
+      <a href="#over">Over ons</a>
+      <a href="#diensten">Diensten</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </header>
 
+  <section class="hero">
+    <h2>Welkom bij Abel Living</h2>
+    <p>Wij brengen rust, stijl en duurzaamheid in jouw leefomgeving.</p>
+  </section>
+
   <main>
-    <section>
+    <section id="over">
       <h2>Over ons</h2>
       <p>
-        Welkom bij <strong>Mijn Bedrijf</strong>. Wij helpen klanten met [jouw specialisatie].
-        Met jarenlange ervaring en oog voor kwaliteit zorgen wij voor het beste resultaat.
+        Bij <strong>Abel Living</strong> geloven we in wonen met aandacht. Wij combineren vakmanschap met oog voor detail en een duurzame aanpak. Ons doel is om ruimtes te creëren die zowel comfortabel als tijdloos zijn.
       </p>
     </section>
 
-    <section>
+    <section id="diensten" class="diensten">
       <h2>Diensten</h2>
       <ul>
-        <li>Dienst 1 – Korte uitleg</li>
-        <li>Dienst 2 – Korte uitleg</li>
-        <li>Dienst 3 – Korte uitleg</li>
+        <li><strong>Interieuradvies</strong><br> Persoonlijke begeleiding bij het inrichten van je woning.</li>
+        <li><strong>Projectinrichting</strong><br> Complete oplossingen voor bedrijven en kantoren.</li>
+        <li><strong>Duurzaam wonen</strong><br> Advies en uitvoering met milieuvriendelijke materialen.</li>
       </ul>
     </section>
 
-    <section class="contact">
+    <section id="contact" class="contact">
       <h2>Contact</h2>
       <p>Neem gerust contact met ons op voor meer informatie.</p>
-      <a href="mailto:info@mijnbedrijf.nl">E-mail ons</a>
+      <a href="mailto:info@abel-living.nl">E-mail ons</a>
       <a href="tel:+310612345678">Bel ons</a>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2025 Mijn Bedrijf – Alle rechten voorbehouden</p>
+    <p>&copy; 2025 Abel Living – Alle rechten voorbehouden</p>
   </footer>
 </body>
 </html>
